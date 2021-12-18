@@ -1,0 +1,72 @@
+﻿<Window x:Class="ПР12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ПР12"
+        mc:Ignorable="d"
+         Title="Практическая №12. Вариант №8" Height="509" Width="380" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Меню">
+                <MenuItem Header="О программе" Click="Info" />
+                <Separator/>
+                <MenuItem Header="Выход" Click="Exit"/>
+            </MenuItem>
+        </Menu>
+        <TabControl Margin="10,23,0,68" HorizontalAlignment="Left" Width="347" >
+            <TabItem Header="Задание 1">
+                <Grid Height="340" Margin="0,0,4,0">
+                    <GroupBox Header="Исходые данные" Height="218" VerticalAlignment="Top">
+                        <Grid HorizontalAlignment="Left" Height="198" VerticalAlignment="Top" Width="327">
+                            <TextBox x:Name="firstSideBox" HorizontalAlignment="Center" Margin="0,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="secondSideBox" HorizontalAlignment="Center" Margin="0,81,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Радиус R1:" HorizontalAlignment="Left" Margin="0,19,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Радиус R2:" HorizontalAlignment="Left" Margin="1,77,0,0" VerticalAlignment="Top"/>
+                            <Button Content="Рассчитать" HorizontalAlignment="Center" Margin="0,146,0,0" VerticalAlignment="Top" Click="Task1CountButton"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Результат" Margin="0,218,0,0">
+                        <Grid HorizontalAlignment="Center" Height="99" VerticalAlignment="Center" Width="326">
+                            <Label Content="Площадь S1" HorizontalAlignment="Left" Margin="29,6,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Площадь S2" HorizontalAlignment="Left" Margin="35,41,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="ploshadBox1" HorizontalAlignment="Left" IsReadOnly="True" Margin="119,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="ploshadBox2" HorizontalAlignment="Left" IsReadOnly="True" Margin="119,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+                            <TextBox x:Name="ploshadBox3" HorizontalAlignment="Left" IsReadOnly="True" Margin="119,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Площадь S2-S1" HorizontalAlignment="Left" Margin="19,63,0,0" VerticalAlignment="Top"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Задание 2">
+                <Grid Height="340" Margin="0,0,4,0">
+                    <GroupBox Header="Исходые данные" Height="218" VerticalAlignment="Top">
+                        <Grid HorizontalAlignment="Left" Height="198" VerticalAlignment="Top" Width="327">
+                            <TextBox x:Name="inputNumber" HorizontalAlignment="Center" Margin="0,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="Номер года" HorizontalAlignment="Left" Margin="24,19,0,0" VerticalAlignment="Top"/>
+                            <Button Content="Рассчитать" HorizontalAlignment="Center" Margin="0,146,0,0" VerticalAlignment="Top" Click="Task2CountButton"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Результат" Margin="0,218,0,0">
+                        <Grid HorizontalAlignment="Center" Height="99" VerticalAlignment="Center" Width="326">
+                            <Label Content="Номер столетия" HorizontalAlignment="Left" Margin="4,32,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="centuriesBox" HorizontalAlignment="Center" IsReadOnly="True" Margin="0,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar HorizontalAlignment="Left" Height="29" Margin="10,0,0,29" VerticalAlignment="Bottom" Width="347">
+            <TextBlock x:Name="time"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="date"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="task1" Text="Площадь"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="task2" Text="Столетие"></TextBlock>
+
+        </StatusBar>
+
+    </Grid>
+</Window>
+    
